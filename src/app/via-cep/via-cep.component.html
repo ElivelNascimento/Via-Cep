@@ -1,0 +1,55 @@
+<form class="row form-horizontal" [formGroup]="formulario">
+    <div class="form-group">
+        <div class="row form-group col-sm-12">
+
+            <div class="col-md-3">
+                <label for="cep" class="control-label">CEP</label>
+                <input type="text" class="form-control" formControlName="cep" id="cep" placeholder="cep"
+                    (blur)="consultaCep()">
+            </div>
+
+            <div class="col-md-3">
+                <label for="numero" class="control-label">numero</label>
+                <input type="text" class="form-control" id="numero" formControlName="numero" placeholder="numero">
+            </div>
+
+            <div class="col-md-4">
+                <label for="complemento" class="control-label">complemento</label>
+                <input type="text" class="form-control" id="complemento" formControlName="complemento"
+                    placeholder="complemento">
+            </div>
+            <div class="col-md-2">
+                <label for="complemento" class="control-label">ibge</label>
+                <input type="text" class="form-control" id="ibge" formControlName="ibge" placeholder="ibge" readonly>
+            </div>
+        </div>
+
+        <div class="row form-group col-sm-12">
+            <div class="col-sm-12">
+                <label for="rua" class="form-label">rua</label>
+                <input type="text" class="form-control" id="rua" formControlName="rua" placeholder="rua" readonly>
+            </div>
+
+            <div class="col-md-6">
+                <label for="bairro" class="control-label">bairro</label>
+                <input type="text" class="form-control" id="cep" formControlName="bairro" placeholder="bairro" readonly>
+            </div>
+
+            <div class="col-md-4">
+                <label for="cidade" class="control-label">cidade</label>
+                <input type="text" class="form-control" id="cidade" formControlName="cidade" placeholder="cidade"
+                    readonly>
+            </div>
+
+            <div class="col-md-2">
+                <label for="estado" class="control-label">estado</label>
+                <input type="text" class="form-control" id="cidade" formControlName="estado" placeholder="estado"
+                    readonly>
+            </div>
+        </div>
+    </div>
+    <div class="col sm-12">
+        <br>
+        <button type="button" class="btn btn-primary" (click)="resetaDadosForm()">limpar campos</button>
+    </div>
+</form>
